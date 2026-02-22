@@ -12,18 +12,18 @@ resource "aws_security_group" "allow_tls" {
   description = var.sg_description
 
     egress {
-    from_port        = var.from_port
-    to_port          = var.to_port
+    from_port        = var.sg_from_port
+    to_port          = var.sg_to_port
     protocol         = "-1"
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = var.sg_cidr_blocks
     ipv6_cidr_blocks = ["::/0"]
   }
 
   ingress {
-    from_port        = var.from_port
-    to_port          = var.to_port
+    from_port        = var.sg_from_port
+    to_port          = var.sg_to_port
     protocol         = "-1"
-    cidr_blocks      = var.cidr_blocks
+    cidr_blocks      = var.sg_cidr_blocks
     ipv6_cidr_blocks = ["::/0"]
   }
 
