@@ -12,8 +12,8 @@ variable "instance_type" {
 }
 
 variable "ec2_tags" {
-
-    default {
+        
+    default = {
 
         Name = "HelloWorld"
         project = "roboshop"
@@ -55,7 +55,7 @@ variable "sg_cidr_blocks" {
 
 variable "sg_tags"{
 
-   default {     
+   default = {     
         Name = "aallow all terraform"
      }
 
